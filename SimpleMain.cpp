@@ -21,6 +21,10 @@
 	// Not going to worry too much about this for now.
 // END: Debug
 
+// START: Preprocessed source code command(s)
+	// `gcc -E SimpleMain.cpp > SimpleMain.ii`
+// END: Preprocessed source code command(s)
+
 
 // START: Assembly command(s)
 // man: "The output is in the form of an assembler code file for each

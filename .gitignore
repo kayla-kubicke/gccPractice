@@ -6,6 +6,12 @@
 # Machine code contains sensitive information.
 # Assembly code may also contain sensitive information.
 
+# Also, the following statement is obvious, but worth mentioning:
+# Assuming one provides all the files necessary to build a project,
+# none of these need to be included because the project will be compiled
+# for the specific machine running the executable(s).
+# Providing these not only pose a security risk, it increases the repo's size.
+
 
 ## Debugging-related folders and/or files
 # For mac:
@@ -28,6 +34,9 @@
 *.out
 *.exe
 
+## Preprocessed Source Code
+#
+*.ii
 
 ## Assembly Code
 # Depends.
