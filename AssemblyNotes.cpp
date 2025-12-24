@@ -6,8 +6,9 @@
 // assembler program - translates assembly language into machine language instructions
 
 // Compiling Steps
+	//
 	// START: Preprocessing Notes
-	// Preprocessing
+	// Preprocessing Step
 		// Preprocessing "resolves compiler directives".
 		// compiler directives ("directive" or "pragma") - specifies how a
 		// compiler should process input.
@@ -26,9 +27,41 @@
 			// #if ("conditional compilation") - Changes what code is
 			// compiled based on params provided (typically?)
 	// END: Preprocessing Notes
+	//
 
-	// Compilation
 
-	// Assembly
+	//
+	//START: Compilation Notes
+	// Compilation Step
+		// Translates the source code generated during preprocessing into
+		// assembly language.
+	//END: Compilation Notes
+	//
 
+
+	//
+	// START: Assembly Notes
+	// Assembly Step
+		// Translates the assembly language into machine code.
+
+		// As a side note, gcc uses the GNU assembler, gas. gas is separate
+		// from gcc; it is part of GNU Binutils.
+		// gcc is a compiler driver; it manages the entire
+		// compilation process. The assembler and linker used by gcc to
+		// complete the compilation sequence are separate packages.
+
+		// One can run the GNU assembler independently with the `as` command.
+		// Also, `as` can be passed the processor architecture type if desired,
+		// but I'm unsure if it only supports the native processor and non-natives
+		// need to be manually added to the assembler.
+			// `as -arch arm64 SimpleMain.s -o SimpleMain.o`
+	// END: Assembly Notes
+	//
+
+
+	//
+	// START: Linking Notes
 	// Linking
+			// ADD: ld notes
+	// END: Linking Notes
+	//

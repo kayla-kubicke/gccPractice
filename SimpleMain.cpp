@@ -1,6 +1,8 @@
 // Just a small personal project for understanding some aspects of gcc,
 // assembly code, and machine code.
 
+
+//
 // START: Debug command(s)
 // Mac:
 	// `gcc -g SimpleMain.cpp`
@@ -20,13 +22,18 @@
 	// 12/21: Ran into gdb privilege issue in Docker container.
 	// Not going to worry too much about this for now.
 // END: Debug
+//
 
-// START: Preprocessed source code command(s)
+
+//
+// START: Preprocessed source code command(s) (preprocessing step)
 	// `gcc -E SimpleMain.cpp > SimpleMain.ii`
-// END: Preprocessed source code command(s)
+// END: Preprocessed source code command(s) (preprocessing step)
+//
 
 
-// START: Assembly command(s)
+//
+// START: Assembly source code command(s) (compilation step)
 // man: "The output is in the form of an assembler code file for each
 // non-assembler input file specified."
 // `-S` flag does not actually assemble, thus no executable is generated.
@@ -34,10 +41,20 @@
 // man: "If you only want some of the stages of compilation, you can use -x (or filename suffixes)
 // to tell gcc where to start, and one of the options -c, -S, or -E to say where gcc is to stop."
 
-// `gcc -S SimpleMain.cpp`
+	// `gcc -S SimpleMain.cpp`
 // Generates SimpleMain.s
 	// SimpleMain.s contains SimpleMain.cpp's assembly code.
-// END: Assembly command(s)
+// END: Assembly source code command(s) (compilation step)
+//
+
+
+//
+// START: Machine code command(s) (assembly step)
+	// `gcc -c SimpleMain.cpp`
+		// Generates object file, SimpleMain.o
+	// One could also use the GNU assembler, `as`, directly.
+// END: Machine code command(s) (assembly step)
+//
 
 // Simple c++ program.
 int main() {
