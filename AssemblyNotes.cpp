@@ -62,6 +62,15 @@
 	//
 	// START: Linking Notes
 	// Linking
-			// ADD: ld notes
+			// The linker finds all the memory locations of the program's components
+			// and generates an executable by replacing the components with the
+			// corresponding memory addresses. The linker's behavior may vary
+			// when the component is from an external library.
+			// Static linking will include the memory addresses for external library components.
+			// Dynamic linking will use placeholder references for external library components
+			// and the memory addresses will be located during either load time or runtime.
+
+			// gcc's linker, `ld`, is a part of GNU Binutils. `ld` is capable of both
+			// static and dynamic linking.
 	// END: Linking Notes
 	//

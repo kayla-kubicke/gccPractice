@@ -46,3 +46,6 @@
 # related to the build, use your discretion; include if necessary to build
 # the project.
 *.s
+
+## LLVM Bitcode
+*.bc

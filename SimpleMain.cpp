@@ -21,6 +21,7 @@
 
 	// 12/21: Ran into gdb privilege issue in Docker container.
 	// Not going to worry too much about this for now.
+	// Maybe will play with gdb in WSL later to elimate the Docker variable.
 // END: Debug
 //
 
@@ -54,6 +55,21 @@
 		// Generates object file, SimpleMain.o
 	// One could also use the GNU assembler, `as`, directly.
 // END: Machine code command(s) (assembly step)
+//
+
+//
+// START: Compilation (all steps)
+	// Deletes all intermediate files.
+	// `gcc SimpleMain.cpp`
+
+	// Saves all intermediate files.
+	// `gcc -save-temps SimpleMain.cpp`
+	// NOTE: Generates a .bc (LLVM bitcode) file in addition
+	// to the others created during compilation.
+
+	// For clarity, the intermediate file extention types
+	// saved are .bc, .ii, .o, and .s.
+// END: Compilation (all steps)
 //
 
 // Simple c++ program.
