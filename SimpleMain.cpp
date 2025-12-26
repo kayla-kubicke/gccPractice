@@ -1,5 +1,5 @@
 // Just a small personal project for understanding some aspects of gcc,
-// assembly code, and machine code.
+// assembly code, and machine code. A touch of clang too.
 
 
 //
@@ -66,6 +66,12 @@
 	// `gcc -save-temps SimpleMain.cpp`
 	// NOTE: Generates a .bc (LLVM bitcode) file in addition
 	// to the others created during compilation.
+
+	// Note: The human-readable version of LLVM bitcode
+	// can be output into an .ll (LLVM IR) file.
+	// gcc does not natively support LLVM IR, although one can use
+	// clang.
+	// `clang -S -emit-llvm SimpleMain.cpp -o SimpleMain.ll`
 
 	// For clarity, the intermediate file extention types
 	// saved are .bc, .ii, .o, and .s.

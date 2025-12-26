@@ -12,6 +12,7 @@
 # for the specific machine running the executable(s).
 # Providing these not only pose a security risk, it increases the repo's size.
 
+# Take note, some of these file types are opaque to git "anyway".
 
 ## Debugging-related folders and/or files
 # For mac:
@@ -48,4 +49,21 @@
 *.s
 
 ## LLVM Bitcode
+# Although LLVM bitcode is machine-independent, one should not include it
+# in a pubic repo as it can contain sensitive information.
+# ADD: Details
+# Also, LLVM bitcode is opaque to git. Opaque files fall into two categories.
+# The first are files not tracked by git; if included in a repo, changes made to
+# such files simply override the existing version sitting on the branch every
+# time they are updated.
+# Put another way, calling `git diff` on this type of file is nonsensical.
+# The second type are files where changes are tracked but their content is
+# obfuscated by the nature of the file type.
+# For example, changes to encrypted data are tracked in the ciphertext and are
+# visible on the branch but the underlying plaintext remains obscured.
+# If these nuances are important to one's project, research to verify the
+# specific situation.
 *.bc
+
+## LLVM IR
+*.ll
