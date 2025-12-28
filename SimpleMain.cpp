@@ -1,6 +1,5 @@
 // Just a small personal project for understanding some aspects of gcc,
-// assembly code, and machine code. A touch of clang too.
-
+// assembly code, and machine code. A touch of clang and LLVM too.
 
 //
 // START: Debug command(s)

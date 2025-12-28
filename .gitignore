@@ -48,7 +48,7 @@
 # the project.
 *.s
 
-## LLVM Bitcode
+## LLVM Bitcode (Low Level Virtual Machine Bitcode)
 # Although LLVM bitcode is machine-independent, one should not include it
 # in a pubic repo as it can contain sensitive information.
 # ADD: Details
@@ -65,5 +65,9 @@
 # specific situation.
 *.bc
 
-## LLVM IR
+## LLVM IR (Low Level Virtual Machine Intermediate Representation)
+# Bitcode and IR are different representations of the same code.
+# If skeptical, use `llvm-dis SimpleMain.bc` to produce to IR version of the provided file.
+# Alternatively, `llvm-as SimpleMain.ll` generates the bitcode counterpart.
+# With this stated, IR is tracked by git.
 *.ll
