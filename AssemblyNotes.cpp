@@ -54,6 +54,7 @@
 		// Also, `as` can be passed the processor architecture type if desired,
 		// but I'm unsure if it only supports the native processor and non-natives
 		// need to be manually added to the assembler.
+			// UPDATE: clang command(s)
 			// `as -arch arm64 SimpleMain.s -o SimpleMain.o`
 	// END: Assembly Notes
 	//

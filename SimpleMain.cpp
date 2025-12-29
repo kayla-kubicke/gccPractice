@@ -77,6 +77,26 @@
 // END: Compilation (all steps)
 //
 
+//
+// START: Optimization Nuances {rename?}
+	// Compare binary files Command(s)
+		// Mac/Raw Linux:
+		// `cmp a.out SimpleMain.o`
+		// Prints the first offset and line number location.
+
+		// `cmp -bl a.out SimpleMain.o`
+		// man: `-b` flag prints differing bytes.
+		// If run without `-l` flag will only output the first differing byte.
+		// man: `-l` flag outputs byte numbers and differing byte values.
+		// Column organization: Offset, first file's byte value, second file's byte value
+		// ADD: Byte offset definition
+
+		// ADD: `-bl` outputs a report; column organization
+
+		// No output indicates files are identical.
+// END: Optimization Nuances
+//
+
 // Simple c++ program.
 int main() {
 	return 0;
