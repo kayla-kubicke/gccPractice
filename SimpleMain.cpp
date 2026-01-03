@@ -15,12 +15,29 @@
 	// Run debug file with gdb.
 	// `gdb ./Debug`
 
-	// If needed:
-	// `set disable-randomization off`
+	// Set desired breakpoints.
+		// Types of breakpoints:
+			// Breakpoints: Pauses execution at requested point.
+			// Set with line number or function.
+			// `break 2` or `break main`
 
-	// 12/21: Ran into gdb privilege issue in Docker container.
-	// Not going to worry too much about this for now.
-	// Maybe will play with gdb in WSL later to elimate the Docker variable.
+			// Watchpoints: Pauses execution when an object, expression, or variable* changes.
+			// *As far as I understand, gdb essentially monitors memory address(es)
+			// associated with the requested entity. So saying "...object, expression,
+			// or variable..." may sound a touch ignorant, but under the hood,
+			// one is just requesting gdb watches a single memory address or a
+			// collection of locations.
+			// Set on an entity.
+			// `watch <entity>` // SimpleMain is so tiny I don't have an obvious example.
+
+			// ADD: Tracepoints: Passively logs information about requested point(s).?
+			// ADD: Catchpoints: Stop execution at requested point.
+
+	// List all breakpoints set.
+	// `info break`
+
+	// Run gdb
+	// `run`
 // END: Debug
 //
 
