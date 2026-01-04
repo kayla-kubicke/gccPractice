@@ -18,12 +18,21 @@
 	// Set desired breakpoints.
 		// Types of breakpoints:
 			// Breakpoints: Pauses execution at requested point(s).
-			// Set with line number or function.
+			// Set with line number or function. (UPDATE: Function cause possible scoping issues?)
 			// `break 2` or `break main`
 
-			// Watchpoints: Pauses execution when an object, expression, variable,
-			// or memory address(es)* changes.
-			// *This is more nuanced than I initially thought; rewrite required.
+			// Watchpoints: Pauses execution when an expression changes value.
+			// Set with an expression. Note, the expression can be complex; for example
+			// one could include comparison and boolean operators.
+			// `watch <expression>` // SimpleMain doesn't have an obvious example.
+
+			// Reading: The Art of Debugging with GDB, DDD, and Eclipse; Matloff and Salzman
+			// Chapter 2
+			// CLARIFY: Scoping...
+			// "...you can only watch a variable that exists and is in scope."
+			// If the watched expression is removed from call stack, the watchpoint is deleted as well.
+			// Ideal for examining unexplained changes to global variables.
+
 			// UPDATE: `-l` flag has as something to do with scoping issues; may need to revisit
 			// scoping issues/concerns for breakpoints in general. Maybe I do not fully
 			// understand relationship yet.
