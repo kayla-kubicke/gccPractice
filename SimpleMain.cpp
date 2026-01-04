@@ -17,20 +17,18 @@
 
 	// Set desired breakpoints.
 		// Types of breakpoints:
-			// Breakpoints: Pauses execution at requested point.
+			// Breakpoints: Pauses execution at requested point(s).
 			// Set with line number or function.
 			// `break 2` or `break main`
 
-			// Watchpoints: Pauses execution when an object, expression, or variable* changes.
-			// *As far as I understand, gdb essentially monitors memory address(es)
-			// associated with the requested entity. So saying "...object, expression,
-			// or variable..." may sound a touch ignorant, but under the hood,
-			// one is just requesting gdb watches a single memory address or a
-			// collection of locations.
-			// Set on an entity.
-			// `watch <entity>` // SimpleMain is so tiny I don't have an obvious example.
+			// Watchpoints: Pauses execution when an object, expression, variable,
+			// or memory address(es)* changes.
+			// *This is more nuanced than I initially thought; rewrite required.
+			// UPDATE: `-l` flag has as something to do with scoping issues; may need to revisit
+			// scoping issues/concerns for breakpoints in general. Maybe I do not fully
+			// understand relationship yet.
 
-			// ADD: Tracepoints: Passively logs information about requested point(s).?
+			// Tracepoints: Passively logs information about requested point(s).
 			// ADD: Catchpoints: Stop execution at requested point.
 
 	// List all breakpoints set.
