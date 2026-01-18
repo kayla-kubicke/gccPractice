@@ -71,3 +71,12 @@
 # Alternatively, `llvm-as SimpleMain.ll` generates the bitcode counterpart.
 # With this stated, IR is tracked by git.
 *.ll
+
+# Vim creates a temporary file when the editor is opened. The file is typically
+# deleted when the editor is closed, but may remain in the directory if vim's
+# ending processes are interrupted.
+# While unlikely, if one is using vim, they may show up in the directory if
+# vim crashes.
+# They are binary files that contain highly sensitive information.
+# Even if the likelihood is small, if one is using vim, they should be ignored.
+*.swp
